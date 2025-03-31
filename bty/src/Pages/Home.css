@@ -1,0 +1,343 @@
+/* Carousel Navigation */
+.slick-prev,
+.slick-next {
+  color: white !important;
+  z-index: 10;
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+  color: blue !important;
+}
+
+/* Global Container */
+.homedetail {
+  max-width: 100%;
+  animation: fadeIn 2s ease-out;
+}
+
+/* Image Grid */
+.image-grid {
+  margin: 20px 0;
+  background-color: rgb(117, 141, 117);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.image-col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Image Container */
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  max-width: 300px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transform: scale(0.95);
+  transition: transform 0.5s ease-out;
+}
+
+.image-container:hover {
+  transform: scale(1.05);
+}
+
+.grid-image {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease-in-out;
+  object-fit: cover;
+}
+
+/* Ensure specific image height */
+.image-container:nth-child(2) .grid-image {
+  height: 250px !important;
+}
+
+/* Hover Effect */
+.image-container:hover .grid-image {
+  transform: scale(1.05);
+}
+
+/* Description Overlay */
+.image-overlay {
+  position: absolute;
+  bottom: -50px;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  color: #ffd700; /* Gold */
+  text-align: center;
+  padding: 10px;
+  font-size: 14px;
+  transition: bottom 0.3s ease-in-out;
+}
+
+.image-container:hover .image-overlay {
+  bottom: 0;
+}
+
+/* Carousel Container */
+.carousel-container {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Overlay with Animation */
+.carousel-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 15px 30px;
+  text-align: center;
+  border-radius: 8px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Overlay Text with Different Colors */
+.carousel-overlay h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 0;
+  opacity: 0;
+  animation: slideDown 1.5s ease-in-out forwards,
+    textGlow 1.5s ease-in-out infinite alternate;
+  color: #ff6347; /* Tomato red */
+}
+
+.carousel-overlay p {
+  font-size: 20px;
+  margin: 5px 0 0;
+  opacity: 0;
+  animation: slideUp 1.5s ease-in-out forwards,
+    fadeInText 2s ease-in-out forwards;
+  animation-delay: 0.5s;
+  color: #ffff00; /* Yellow */
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes textGlow {
+  0% {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+  }
+  50% {
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+  }
+  100% {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+  }
+}
+
+@keyframes fadeInText {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .image-container {
+    height: 200px;
+    max-width: 100%;
+  }
+
+  .image-overlay {
+    font-size: 12px;
+  }
+
+  .homedetail .ant-carousel .slick-slide img {
+    height: 400px !important;
+  }
+
+  .image-col {
+    flex: 0 0 50%;
+  }
+
+  .ant-row {
+    padding: 20px;
+  }
+
+  .slick-prev,
+  .slick-next {
+    font-size: 24px;
+  }
+
+  .title-center {
+    font-size: 32px;
+  }
+
+  .image-grid {
+    margin: 10px 0;
+  }
+
+  .carousel-overlay h2 {
+    font-size: 28px;
+    animation: slideDown 2s ease-in-out forwards,
+      textGlow 1.5s ease-in-out infinite alternate;
+    color: #32cd32; /* Lime green */
+  }
+
+  .carousel-overlay p {
+    font-size: 18px;
+    animation: slideUp 2s ease-in-out forwards,
+      fadeInText 2s ease-in-out forwards;
+    animation-delay: 0.5s;
+    color: #ff4500; /* OrangeRed */
+  }
+}
+
+@media (max-width: 480px) {
+  .image-container {
+    height: 150px;
+  }
+
+  .image-col {
+    flex: 0 0 100%;
+  }
+
+  .homedetail .ant-carousel .slick-slide img {
+    height: 300px !important;
+  }
+
+  .title-center {
+    font-size: 28px;
+  }
+
+  .image-overlay {
+    font-size: 12px;
+  }
+
+  .carousel-overlay h2 {
+    font-size: 24px;
+    animation: slideDown 1.5s ease-in-out forwards,
+      textGlow 1.5s ease-in-out infinite alternate;
+    color: #8a2be2; /* BlueViolet */
+  }
+
+  .carousel-overlay p {
+    font-size: 16px;
+    animation: slideUp 1.5s ease-in-out forwards,
+      fadeInText 1.5s ease-in-out forwards;
+    animation-delay: 0.5s;
+    color: #ff1493; /* DeepPink */
+  }
+}
+
+/* Hover Animations */
+.image-container:hover {
+  animation: bounceIn 1s ease-out;
+}
+
+/* Button Animations */
+button {
+  animation: fadeIn 2s ease-in-out;
+}
+/* Animation for fade-in text */
+.fade-in-text {
+  opacity: 0;
+  animation: fadeInText 4s forwards;
+}
+
+@keyframes fadeInText {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Animation for slide-in text */
+.slide-in-text {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideInText 4s forwards;
+}
+
+@keyframes slideInText {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

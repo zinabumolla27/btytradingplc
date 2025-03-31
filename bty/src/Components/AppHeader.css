@@ -1,0 +1,271 @@
+/* General styles */
+.appheader-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f9f9f9;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px 20px;
+  position: relative;
+  z-index: 1000;
+}
+
+.appheader-container.scrolled {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  background-color: #f9f9f9;
+  transition: all 0.3s ease;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.logo {
+  height: auto;
+  max-width: 150px;
+}
+.company-name {
+  font-weight: bold;
+  color: rgb(25, 64, 109);
+  font-size: 1.2rem; /* Default font size */
+  white-space: nowrap; /* Prevents text from breaking */
+}
+/* Make it responsive */
+@media screen and (max-width: 768px) {
+  .logo-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 5px;
+  }
+}
+.logo {
+  max-width: 120px;
+}
+
+.company-name {
+  font-size: 1rem; /* Smaller text on mobile */
+}
+
+.menuItems {
+  flex-grow: 1;
+  background-color: #f9f9f9;
+  color: white;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.ant-menu-horizontal {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0; /* General styles */
+  .appheader-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f9f9f9;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+    position: relative;
+    z-index: 1000;
+  }
+
+  .appheader-container.scrolled {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
+  }
+
+  .logo-container {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+  }
+
+  .logo {
+    height: 70px;
+    margin-left: 30px;
+  }
+
+  .menuItems {
+    flex-grow: 1;
+    background-color: #f9f9f9;
+    color: white;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .ant-menu-horizontal {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0;
+    border-bottom: none;
+  }
+
+  .appheader-container .ant-menu-item {
+    color: #000; /* Ensure the text color is dark */
+    font-weight: bold; /* Make menu text bold */
+  }
+
+  .ant-menu-item:hover {
+    border-bottom: none;
+    background-color: #f0f0f0;
+    color: #1890ff; /* Change text color on hover */
+  }
+
+  .menu-center {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    width: 500px;
+  }
+
+  .search-bar {
+    width: 200px;
+    margin: 0 auto;
+  }
+
+  /* For the Menu button on small screens (hamburger icon) */
+  .menu-icon {
+    display: none;
+  }
+
+  @media (max-width: 767px) {
+    .menuItems {
+      display: none; /* Hide the horizontal menu on small screens */
+    }
+
+    .menu-icon {
+      display: block; /* Show the menu button (hamburger) */
+    }
+
+    .menu-center {
+      display: none; /* Hide the search bar on small screens */
+    }
+  }
+
+  @media (max-width: 768px) {
+    .appheader-container {
+      flex-direction: column;
+    }
+
+    .logo-container {
+      margin-bottom: 10px;
+    }
+
+    .menuItems {
+      display: block;
+    }
+
+    .ant-menu-item {
+      text-align: left;
+    }
+  }
+
+  /* Drawer styles for the mobile menu */
+  .drawer-menu {
+    width: 250px; /* Adjust drawer width */
+  }
+
+  .ant-menu-item {
+    font-weight: bold;
+    color: #000; /* Ensure text color is dark */
+  }
+
+  .footer-link:hover {
+    color: #1890ff;
+  }
+
+  .social-icon:hover {
+    color: #1890ff;
+  }
+
+  border-bottom: none;
+}
+
+.appheader-container .ant-menu-item {
+  color: #000; /* Ensure the text color is dark */
+  font-weight: bold; /* Make menu text bold */
+}
+
+.ant-menu-item:hover {
+  border-bottom: none;
+  background-color: #f0f0f0;
+  color: #1890ff; /* Change text color on hover */
+}
+
+.menu-center {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  width: 500px;
+}
+
+.search-bar {
+  width: 200px;
+  margin: 0 auto;
+}
+
+/* For the Menu button on small screens (hamburger icon) */
+.menu-icon {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .menuItems {
+    display: none; /* Hide the horizontal menu on small screens */
+  }
+
+  .menu-icon {
+    display: block; /* Show the menu button (hamburger) */
+  }
+
+  .menu-center {
+    display: none; /* Hide the search bar on small screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .appheader-container {
+    flex-direction: column;
+  }
+
+  .logo-container {
+    margin-bottom: 10px;
+  }
+
+  .menuItems {
+    display: block;
+  }
+
+  .ant-menu-item {
+    text-align: left;
+  }
+}
+
+/* Drawer styles for the mobile menu */
+.drawer-menu {
+  width: 250px; /* Adjust drawer width */
+}
+
+.ant-menu-item {
+  font-weight: bold;
+  color: #000; /* Ensure text color is dark */
+}
+
+.footer-link:hover {
+  color: #1890ff;
+}
+
+.social-icon:hover {
+  color: #1890ff;
+}

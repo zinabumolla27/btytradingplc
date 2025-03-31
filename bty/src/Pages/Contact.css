@@ -1,0 +1,132 @@
+.contact-page {
+  position: relative;
+  background-image: url("/home/hmeressa/Documents/Bty-trading/bty/src/Assets/bbandw.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+.form-container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 30px;
+  padding-top: 0;
+  background-color: black;
+  border-radius: 5px;
+  opacity: 0.5;
+  width: 400px;
+  background-color: rgb(96, 94, 100);
+}
+.form-input {
+  height: 30px; /* Set equal height for all inputs */
+}
+.form-input + .ant-input-affix-wrapper {
+  height: 45px; /* Ensure icon input fields also match the height */
+}
+.ant-input-textarea {
+  height: 80px;
+  min-height: 80px;
+}
+
+.form-item {
+  margin-bottom: 16px;
+}
+
+.input-field {
+  display: flex;
+  align-items: center;
+  height: 40px;
+}
+
+.input-field input,
+.input-field textarea {
+  padding-left: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 4px;
+  width: 100%;
+  resize: none;
+}
+
+.input-field::placeholder {
+  text-align: left;
+  color: white;
+  font-weight: bold;
+}
+
+.ant-input-affix-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.ant-input-affix-wrapper .anticon {
+  display: flex;
+  align-items: center;
+  margin-right: 8px;
+  color: rgb(3, 1, 15);
+}
+
+.textarea-container {
+  display: flex;
+  align-items: flex-start;
+  border-radius: 6px;
+  padding-top: 8px;
+  width: 100%;
+}
+
+.textarea-icon {
+  margin-right: 8px;
+  margin-top: 4px;
+  color: rgba(5, 0, 0, 0.979);
+}
+
+.submit-button {
+  width: 100%;
+  padding: 10px;
+  background-color: rgb(7, 51, 243);
+  color: rgb(249, 248, 252);
+  border-radius: 4px;
+  font-size: 20px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: green;
+}
+.human-icon {
+  text-align: center;
+  color: white;
+}
+.contact-info {
+  padding: 20px;
+
+  border-radius: 8px;
+}
+
+.contact-info-heading {
+  font-size: 24px;
+  font-weight: bold;
+  color: #1890ff;
+  margin-bottom: 15px;
+}
+
+.contact-info p {
+  font-size: 16px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.contact-info p svg {
+  margin-right: 10px;
+  color: #1890ff;
+}
+.ant-input,
+.ant-input-textarea {
+  color: rgb(3, 0, 0) !important; /* Ensures text color is white */
+}
+
+.ant-input::placeholder,
+.ant-input-textarea::placeholder {
+  color: rgba(10, 10, 10, 0.7) !important;
+  font-weight: bold;
+}
