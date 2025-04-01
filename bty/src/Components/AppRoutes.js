@@ -8,6 +8,7 @@ import Contact from "../Pages/Contact";
 import News from "../Pages/News";
 import Import from "../Pages/Import";
 import Export from "../Pages/Export";
+import FAQ from "../Pages/FAQ";
 function AppRoutes() {
   return (
     <div>
@@ -15,6 +16,7 @@ function AppRoutes() {
         <Route path="/" element={<Home />} />
         <Route path="/CompanyProfile" element={<CompanyProfile />} />
         <Route path="/SisterCompany" element={<SisterCompany />} />
+        <Route path="/FAQ" element={<FAQ />} />
         <Route path="/Import" element={<Import />} />
         <Route path="/Export" element={<Export />} />
         <Route path="/Products" element={<Products />} />

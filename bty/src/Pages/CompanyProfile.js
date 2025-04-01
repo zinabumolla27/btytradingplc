@@ -93,20 +93,59 @@ function CompanyProfile() {
       </div>
 
       {/* Mission, Vision, and Goals Section */}
-      <div style={{ width: "90%", marginLeft: "5%", padding: "20px" }}>
+      <div
+        style={{
+          width: "90%",
+          margin: "auto",
+          padding: "20px",
+          fontFamily: "'Poppins', sans-serif",
+        }}
+      >
         <Row gutter={[16, 24]} justify="center">
           {/* Mission Card */}
           <Col xs={24} sm={12} md={8}>
             <Card
-              title="Mission"
+              title={
+                <div
+                  style={{
+                    textAlign: "center",
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    gap: "5px",
+                  }}
+                >
+                  <AimOutlined
+                    style={{
+                      fontSize: "40px",
+                      color: "#1890ff",
+                      marginBottom: "5px",
+                    }}
+                  />
+                  <h2
+                    style={{ fontWeight: "600", fontSize: "18px", margin: "0" }}
+                  >
+                    Mission
+                  </h2>
+                </div>
+              }
               bordered={false}
-              cover={<AimOutlined style={{ fontSize: 40, color: "#1890ff" }} />}
               className="card-container mission-card"
               hoverable
+              style={{
+                textAlign: "justify",
+                padding: "10px",
+                minHeight: "220px",
+                borderRadius: "10px",
+                fontSize: "14px",
+                lineHeight: "1.4",
+                color: "#333",
+                wordSpacing: "0px",
+              }}
             >
-              <Paragraph>
+              <Paragraph style={{ margin: "0" }}>
                 Our mission is to deliver premium agro-based products to
-                international markets, We aim to empower businesses and enhance
+                international markets. We aim to empower businesses and enhance
                 global food security by providing trusted and reliable
                 solutions.
               </Paragraph>
@@ -116,13 +155,45 @@ function CompanyProfile() {
           {/* Vision Card */}
           <Col xs={24} sm={12} md={8}>
             <Card
-              title="Vision"
+              title={
+                <div
+                  style={{
+                    textAlign: "center",
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    gap: "5px",
+                  }}
+                >
+                  <EyeOutlined
+                    style={{
+                      fontSize: "40px",
+                      color: "#52c41a",
+                      marginBottom: "5px",
+                    }}
+                  />
+                  <h2
+                    style={{ fontWeight: "600", fontSize: "18px", margin: "0" }}
+                  >
+                    Vision
+                  </h2>
+                </div>
+              }
               bordered={false}
-              cover={<EyeOutlined style={{ fontSize: 40, color: "#52c41a" }} />}
               className="card-container vision-card"
               hoverable
+              style={{
+                textAlign: "justify",
+                padding: "10px",
+                minHeight: "220px",
+                borderRadius: "10px",
+                fontSize: "14px",
+                lineHeight: "1.4",
+                color: "#333",
+                wordSpacing: "0px",
+              }}
             >
-              <Paragraph>
+              <Paragraph style={{ margin: "0" }}>
                 To be a leading global provider of high-quality agricultural
                 commodities, fostering sustainable growth and creating lasting
                 value for our partners and communities worldwide.
@@ -133,26 +204,55 @@ function CompanyProfile() {
           {/* Goal Card */}
           <Col xs={24} sm={12} md={8}>
             <Card
-              title="Goal"
-              bordered={false}
-              cover={
-                <CheckCircleOutlined
-                  style={{ fontSize: 40, color: "#faad14" }}
-                />
+              title={
+                <div
+                  style={{
+                    textAlign: "center",
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    gap: "5px",
+                  }}
+                >
+                  <CheckCircleOutlined
+                    style={{
+                      fontSize: "40px",
+                      color: "#faad14",
+                      marginBottom: "5px",
+                    }}
+                  />
+                  <h2
+                    style={{ fontWeight: "600", fontSize: "18px", margin: "0" }}
+                  >
+                    Goal
+                  </h2>
+                </div>
               }
+              bordered={false}
               className="card-container goal-card"
               hoverable
+              style={{
+                textAlign: "justify",
+                padding: "10px",
+                minHeight: "220px",
+                borderRadius: "10px",
+                fontSize: "14px",
+                lineHeight: "1.4",
+                color: "#333",
+                wordSpacing: "0px",
+              }}
             >
-              <Paragraph>
+              <Paragraph style={{ margin: "0" }}>
                 To establish long-term, mutually beneficial relationships with
                 clients and partners, expanding our global presence while
-                continuously improving our product quality, delivery timelines,
-                and customer satisfaction.
+                continuously improving product quality, delivery timelines, and
+                customer satisfaction.
               </Paragraph>
             </Card>
           </Col>
         </Row>
       </div>
+
       <div>
         <strong
           style={{

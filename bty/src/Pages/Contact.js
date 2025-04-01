@@ -19,9 +19,6 @@ const Contact = () => {
     { icon: <MailOutlined />, text: "info@btytrading.com" },
     { icon: <PhoneOutlined />, text: "+251929260805" },
     { icon: <HomeOutlined />, text: "Bole, Addis Ababa, Ethiopia" },
-    {
-      text: "Thank you for your interest. Please fill out the form below and we will reach out to you shortly.",
-    },
   ];
 
   return (

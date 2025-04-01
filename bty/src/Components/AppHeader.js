@@ -14,6 +14,7 @@ import {
   ExportOutlined,
   ImportOutlined,
   MenuOutlined,
+  QuestionCircleOutlined,
 } from "@ant-design/icons";
 import ContactInfo from "./ContactInfo";
 
@@ -69,8 +70,17 @@ function AppHeader() {
           ),
           key: "SisterCompany",
         },
+        {
+          label: (
+            <>
+              <QuestionCircleOutlined /> FAQ
+            </>
+          ),
+          key: "faq",
+        },
       ],
     },
+
     {
       label: (
         <>

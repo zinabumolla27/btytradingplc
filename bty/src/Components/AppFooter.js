@@ -4,24 +4,24 @@ import {
   TwitterOutlined,
   InstagramOutlined,
   LinkedinOutlined,
-  PhoneOutlined, // New icon for phone
-  MailOutlined, // New icon for email
-  EnvironmentOutlined, // New icon for location
+  PhoneOutlined,
+  MailOutlined,
+  EnvironmentOutlined,
 } from "@ant-design/icons";
-import { useNavigate } from "react-router-dom"; // Use useNavigate from React Router v6
+import { useNavigate } from "react-router-dom";
 
 const { Footer } = Layout;
 const { Text, Title } = Typography;
 
 const AppFooter = () => {
-  const navigate = useNavigate(); // Use useNavigate hook for navigation
+  const navigate = useNavigate();
 
   const handleSocialClick = (url) => {
-    window.open(url, "_blank"); // Open in new tab
+    window.open(url, "_blank");
   };
 
   const handleQuickLinkClick = (path) => {
-    navigate(path); // Use navigate to navigate to the respective page
+    navigate(path);
   };
 
   return (
@@ -29,8 +29,8 @@ const AppFooter = () => {
       style={{
         backgroundColor: "#001529",
         color: "#fff",
-        padding: "20px 50px", // Reduced padding for compact look
-        borderTop: "1px solid #444", // subtle separation
+        padding: "20px 50px",
+        borderTop: "1px solid #444",
       }}
     >
       <Row gutter={[32, 32]} justify="center">
@@ -46,7 +46,7 @@ const AppFooter = () => {
           </Text>
         </Col>
 
-        {/* Quick Links - Centered and compact */}
+        {/* Quick Links */}
         <Col xs={24} sm={12} md={8} lg={6} style={{ textAlign: "center" }}>
           <Title level={4} style={{ color: "#fff", fontWeight: "bold" }}>
             Quick Links
@@ -54,7 +54,7 @@ const AppFooter = () => {
           <Space direction="vertical" size={4}>
             <Text
               style={{ color: "#bbb", cursor: "pointer", fontSize: "14px" }}
-              onClick={() => handleQuickLinkClick("/")} // Change the path as needed
+              onClick={() => handleQuickLinkClick("/")}
             >
               Home
             </Text>
@@ -101,19 +101,17 @@ const AppFooter = () => {
           <Title level={4} style={{ color: "#fff", fontWeight: "bold" }}>
             Follow Us
           </Title>
-          <Space size="large">
+          <Space size="large" style={{ fontSize: "24px" }}>
             <FacebookOutlined
               style={{
-                fontSize: "24px",
                 color: "#bbb",
                 cursor: "pointer",
                 transition: "color 0.3s ease",
               }}
-              onClick={() => handleSocialClick("https://facebook.com")} // Add your social URLs here
+              onClick={() => handleSocialClick("https://facebook.com")}
             />
             <TwitterOutlined
               style={{
-                fontSize: "24px",
                 color: "#bbb",
                 cursor: "pointer",
                 transition: "color 0.3s ease",
@@ -122,7 +120,6 @@ const AppFooter = () => {
             />
             <InstagramOutlined
               style={{
-                fontSize: "24px",
                 color: "#bbb",
                 cursor: "pointer",
                 transition: "color 0.3s ease",
@@ -131,7 +128,6 @@ const AppFooter = () => {
             />
             <LinkedinOutlined
               style={{
-                fontSize: "24px",
                 color: "#bbb",
                 cursor: "pointer",
                 transition: "color 0.3s ease",
